@@ -1,11 +1,40 @@
 .header {
     width: 100%;
     height: auto;
-    background-color: antiquewhite;
+    background-color: #fffde8;
     padding: auto;
 }
 
 .button-group {
     display: flex;
     flex: row;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+.vis-container {
+    display: block;
+    width: 900px;
+    height: 500px;
+}
+
+.side-container {
+
+}
+
+.tooltip {
+    display: flex;
+    position: absolute;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 3px;
+    font: 12px sans-serif;
+    background: #bdffe4;
+    border: 0px;
+    border-radius: 5px;
+    pointer-events: none;
 }

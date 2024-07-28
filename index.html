@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" type="text/css" href="style.css" />
+
 <head>
     <meta charset="UTF-8">
     <title>Exploration of Student Demographics and Associated Exam Performance</title>
@@ -12,19 +13,32 @@
         }
     </style>
 </head>
+
 <body>
     <div class="header">
         <h2>Exploration of Student Demographics and Associated Exam Performance</h2>
-        <button onclick="showScene(1)">Scene 1</button>
-        <button onclick="showScene(2)">Scene 2</button>
-        <button onclick="showScene(3)">Scene 3</button>
+        <h5>Visualization by Zachary Thurston. Prepared for CS 416 (Data Visualization). Utilizing D3, HTML, CSS, Javascript.</h5>
+        <h4>Use the below buttons to adjust to different scenes that explore the data. The dataset is on <a href="https://www.kaggle.com/datasets/spscientist/students-performance-in-exams/data">student exam performance</a>.</h4>
+        <h4>Hover over elements of the chart  to reveal more information.</h4>
+        <button onclick="showScene(1)">Slide 1</button>
+        <button onclick="showScene(2)">Slide 2</button>
+        <button onclick="showScene(3)">Slide 3</button>
     </div>
-    <div class="chart-container" id="scene1"></div>
-    <div class="chart-container" id="scene2" style="display:none;"></div>
-    <div class="chart-container" id="scene3" style="display:none;"></div>
+    <div class="main">
+        <div class="vis-container">
+            <div class="chart-container" id="scene1"></div>
+            <div class="chart-container" id="scene2" style="display:none;"></div>
+            <div class="chart-container" id="scene3" style="display:none;"></div>
+        </div>
+        <div class="takeaways" id="takeaways">
+            <h3>Takeaways:</h3>
+            <p id="takeaway-content">In slide 1, we see the comparison of male and female scores across three different categories: math, reading, and writing. Both gender groups are of a similar size for the sample taken, and these scores are averaged. Highlighting over each bar will reveal more statistical information. However we can see, in aggregate that male students performed best in mathematics, comparatively better than female students. On the contrary, female students had a tendency to do better than male students in both reading and writing as a whole.</p>
+        </div>
+    </div>
 
-    
+
 
     <script src="vis.js"></script>
 </body>
+
 </html>
